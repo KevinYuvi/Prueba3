@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head><title>Turno Médico</title></head>
+<body>
+    <h2>Formulario de Turno Médico</h2>
+    <form method="POST">
+        <h3>Hospital</h3>
+        Nombre del hospital: <input type="text" name="nombre_hospital" required><br>
+
+        <h3>Doctor</h3>
+        Nombre del doctor: <input type="text" name="nombre_doctor" required><br>
+        Especialidad: <input type="text" name="especialidad" required><br>
+
+        <h3>Paciente</h3>
+        Nombre del paciente: <input type="text" name="nombre_paciente" required><br>
+        Edad: <input type="number" name="edad" required><br>
+        Género: <select name="genero">
+            <option value="Masculino">Masculino</option>
+            <option value="Femenino">Femenino</option>
+            <option value="Otro">Otro</option>
+        </select><br>
+        Síntomas: <textarea name="sintomas" required></textarea><br>
+        Notas adicionales: <textarea name="notas"></textarea><br>
+
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
