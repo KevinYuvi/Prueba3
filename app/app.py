@@ -41,6 +41,19 @@ def agendar():
     db.session.commit()
     return redirect(url_for('index'))
 
+@app.route('/initdb')
+def initdb():
+    db.create_all()
+
+    # Datos de ejemplo
+    if Doctor.query.count() == 0:
+        db.session.add(Doctor(nombre='Dra. María Pérez', especialidad='Pediatría'))
+        db.session.add(Doctor(nombre='Dr. Juan López', especialidad='Medicina General'))
+        db.session.add(Hospital(nombre='Hospital Central', direccion='Av. Principal'))
+        db.session.commit()
+    
+    return 'Base de datos inicializada.'
+
 @app.cli.command('initdb')
 def initdb_command():
     db.create_all()
