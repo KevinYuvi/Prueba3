@@ -1,4 +1,3 @@
 flask
 flask_sqlalchemy
-flask_migrate
-pymysql
+psycopg2-binary
